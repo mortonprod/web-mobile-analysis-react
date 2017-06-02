@@ -1,0 +1,106 @@
+.app {
+    text-align: center;
+    position:relative;
+}
+
+.app__title {
+    display: block;
+    position: relative;
+    width: 90%;
+    margin: 20px auto;
+    font-family: Dosis-ExtraBold;
+    font-size: 64px;
+    color: #000000;
+    background: white;
+    border: 1px solid #979797;
+    box-shadow: 2px 2px 2px 5px rgba(0,0,0,0.50), inset 0 1px 3px 0 rgba(0,0,0,0.50), inset 0 1px 3px 0 rgba(0,0,0,0.50);
+    border-radius: 8px;
+    text-align: center;
+    background: rgb(240,249,255);
+    background: linear-gradient(to bottom, rgba(240,249,255,1) 0%,rgba(203,235,255,1) 47%,rgba(161,219,255,1) 100%);
+    transition: opacity 0.2s ease-in-out;
+}
+
+.app__title img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    margin-top: -50px; /* Half the height */
+    margin-left: -50px; /* Half the width */
+    transition: opacity 0.2s ease-in-out;
+}
+
+.app__title h1 {
+    position: relative;
+    font-size: 64px;
+    z-index: 100;
+    transition: opacity 0.2s ease-in-out;
+}
+.app__title__image {
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    width: 30%;
+    color: red;
+    height: auto;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.app__boxes{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    margin:20px;
+    padding:20px;
+}
+
+.app__box {
+    position: relative;
+    margin: 10px;
+    transition: opacity 0.2s ease-in-out;
+}
+.app__box__cover {
+    position: absolute;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: #80C3F3;
+    font-size:15vw;
+}
+.app__box__cover--expose{
+    opacity:0.7;
+}
+.app__box img{
+    width:100%;
+    height:auto;
+}
+
+.app--hidden {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+.app__background{
+    position:absolute;
+    top:-15%;
+    left:0;
+    width:auto;
+    height:100%;
+    animation:appear 0.5s;
+}
